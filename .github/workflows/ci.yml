@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print commit ID
-      run: echo "Commit ID: $GITHUB_SHA"
+      run: echo "Commit ID - $GITHUB_SHA "
