@@ -11,18 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Print commit ID
-      run: echo "Commit ID - $GITHUB_SHA "
-
-    - name: Extract repository information
-      run: |
-        REPO_INFO=$GITHUB_REPOSITORY
-        echo "REPO_INFO: $REPO_INFO"
-        OWNER=$(echo $REPO_INFO | cut -d'/' -f1)
-        REPO=$(echo $REPO_INFO | cut -d'/' -f2)
-        echo "Repository: $REPO"
-        echo "Owner: $OWNER"
-
     - name: Extract commit ID and repository information
       run: |
         COMMIT_ID=$GITHUB_SHA
@@ -33,11 +21,6 @@ jobs:
         echo "Commit ID: $COMMIT_ID"
         echo "Repository: $REPO"
         echo "Owner: $OWNER"
-
-    - name: Get Hash
-      id: hash
-      run: |
-        echo 'git_hash=$(git rev-parse --short "$GITHUB_SHA")'
 
     - name: Create commit status
       run: |
