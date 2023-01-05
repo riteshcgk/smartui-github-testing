@@ -21,3 +21,18 @@ jobs:
         echo "Repository: $REPO"
         echo "Owner: $OWNER"
 
+    - name: Extract commit ID and repository information
+        run: |
+          COMMIT_ID=$GITHUB_SHA
+          REPO_INFO=$GITHUB_REPOSITORY
+          echo "REPO_INFO: $REPO_INFO"
+          OWNER=$(echo $REPO_INFO | cut -d'/' -f1)
+          REPO=$(echo $REPO_INFO | cut -d'/' -f2)
+          echo "Commit ID: $COMMIT_ID"
+          echo "Repository: $REPO"
+          echo "Owner: $OWNER"
+
+    - name: Set API host for update-status API
+      run: |
+        API_HOST=$GITHUB_SERVER_URL/api/v3
+        echo "API host for update-status API: $API_HOST"
