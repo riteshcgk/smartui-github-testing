@@ -11,3 +11,13 @@ jobs:
     steps:
     - name: Print commit ID
       run: echo "Commit ID - $GITHUB_SHA "
+
+    - name: Extract repository information
+      run: |
+        REPO_INFO=$GITHUB_REPOSITORY
+        echo "REPO_INFO: $REPO_INFO"
+        OWNER=$(echo $REPO_INFO | cut -d'/' -f1)
+        REPO=$(echo $REPO_INFO | cut -d'/' -f2)
+        echo "Repository: $REPO"
+        echo "Owner: $OWNER"
+
