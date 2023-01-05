@@ -1,0 +1,13 @@
+name: Quality Checks
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Find GitSHA:
+    name: find Git Sha
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print commit ID
+      run: echo "Commit ID: $GITHUB_SHA"
