@@ -32,7 +32,19 @@ jobs:
         echo "Repository: $REPO"
         echo "Owner: $OWNER"
 
-    - name: Set API host for update-status API
+    - name: Create commit status
       run: |
-        API_HOST=$GITHUB_SERVER_URL/api/v3
-        echo "API host for update-status API: $API_HOST"
+        API_HOST=https://api.github.com
+        OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
+        REPO=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
+        REF=$GITHUB_SHA
+        STATUS_URL=$API_HOST/repos/$OWNER/$REPO/statuses/$REF
+        echo "STATUS_URL: $STATUS_URL"
+        curl -X POST $STATUS_URL \
+          -H "Authorization: Bearer $GITHUB_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "state": "success",
+            "description": "The build was successful.",
+            "context": "ci/smartui-github-testing"
+          }'
