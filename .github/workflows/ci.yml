@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  Find GitSHA:
+  Find-GitSHA:
     name: find Git Sha
     runs-on: ubuntu-latest
     steps:
