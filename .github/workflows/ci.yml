@@ -16,17 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Extract commit ID and repository information
-      run: |
-        COMMIT_ID=$GITHUB_SHA
-        REPO_INFO=$GITHUB_REPOSITORY
-        echo "REPO_INFO: $REPO_INFO"
-        OWNER=$(echo $REPO_INFO | cut -d'/' -f1)
-        REPO=$(echo $REPO_INFO | cut -d'/' -f2)
-        echo "Commit ID: $COMMIT_ID"
-        echo "Repository: $REPO"
-        echo "Owner: $OWNER"
-
     - name: Create commit status
       run: |
         API_HOST=https://api.github.com
@@ -39,19 +28,11 @@ jobs:
         echo "Last commit ID of PR: $COMMIT_ID"
         REF=$GITHUB_SHA
         echo "Current Commit ID REF : $REF"
-        STATUS_URL=$API_HOST/repos/$OWNER/$REPO/statuses/$COMMIT_ID
+        STATUS_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
         echo "STATUS_URL: $STATUS_URL"
         echo "GITHUB_URL=$STATUS_URL" >> $GITHUB_ENV
-        curl -X POST $STATUS_URL \
-          -H "Authorization: Bearer $GITHUB_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d '{
-            "state": "success",
-            "description": "The build was successful.",
-            "context": "ci/smartui-github-testing"
-          }'
    
-    - name: Install Dependecies
+    - name: Install Dependencies
       run: npm install
 
     - name: Execute Test
