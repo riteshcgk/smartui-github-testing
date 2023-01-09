@@ -41,7 +41,7 @@ jobs:
         echo "Current Commit ID REF : $REF"
         STATUS_URL=$API_HOST/repos/$OWNER/$REPO/statuses/$COMMIT_ID
         echo "STATUS_URL: $STATUS_URL"
-        echo "GITHUB_URL=${{ STATUS_URL }}" >> $GITHUB_ENV
+        echo "GITHUB_URL=$STATUS_URL" >> $GITHUB_ENV
         curl -X POST $STATUS_URL \
           -H "Authorization: Bearer $GITHUB_TOKEN" \
           -H "Content-Type: application/json" \
