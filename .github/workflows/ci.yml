@@ -5,9 +5,9 @@ on:
       - main
 
 env:
-  ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-  ECR_REPOSITORY: ${{ secrets.ECR_REPO }}
-  IMAGE_TAG: ${{ github.sha }}
+  LT_USERNAME: ${{ secrets.LT_USERNAME }}
+  LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+  GRID_HOST: ${{ secrets.GRID_HOST }}
 
 jobs:
   Find-GitSHA:
