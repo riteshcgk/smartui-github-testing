@@ -1,0 +1,27 @@
+{
+  "name": "smartui-github-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node ./tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaTest/smartui-github-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LambdaTest/smartui-github-testing/issues"
+  },
+  "homepage": "https://github.com/LambdaTest/smartui-github-testing#readme",
+  "dependencies": {
+    "moment": "^2.29.4",
+    "selenium-webdriver": "3.6.0"
+  }
+}

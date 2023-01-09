@@ -4,6 +4,11 @@ on:
     branches:
       - main
 
+env:
+  LT_USERNAME: ${{ secrets.LT_USERNAME }}
+  LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+  GRID_HOST: ${{ secrets.GRID_HOST }}
+
 jobs:
   Find-GitSHA:
     name: find Git Sha
@@ -36,6 +41,7 @@ jobs:
         echo "Current Commit ID REF : $REF"
         STATUS_URL=$API_HOST/repos/$OWNER/$REPO/statuses/$COMMIT_ID
         echo "STATUS_URL: $STATUS_URL"
+        echo "GITHUB_URL=$STATUS_URL" >> $GITHUB_ENV
         curl -X POST $STATUS_URL \
           -H "Authorization: Bearer $GITHUB_TOKEN" \
           -H "Content-Type: application/json" \
@@ -44,3 +50,9 @@ jobs:
             "description": "The build was successful.",
             "context": "ci/smartui-github-testing"
           }'
+   
+    - name: Install Dependecies
+      run: npm install
+
+    - name: Execute Test
+      run: npm test
