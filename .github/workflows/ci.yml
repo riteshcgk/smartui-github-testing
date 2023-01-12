@@ -8,6 +8,7 @@ env:
   LT_USERNAME: ${{ secrets.LT_USERNAME }}
   LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
   GRID_HOST: ${{ secrets.GRID_HOST }}
+  GRID_URL: ${{ secrets.GRID_URL }}
 
 jobs:
   Find-GitSHA:
