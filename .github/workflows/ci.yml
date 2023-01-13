@@ -29,9 +29,9 @@ jobs:
         echo "Last commit ID of PR: $COMMIT_ID"
         REF=$GITHUB_SHA
         echo "Current Commit ID REF : $REF"
-        STATUS_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
-        echo "STATUS_URL: $STATUS_URL"
-        echo "GITHUB_URL=$STATUS_URL" >> $GITHUB_ENV
+        GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
+        echo "GITHUB_URL: $GITHUB_URL"
+        echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
    
     - name: Install Dependencies
       run: npm install
