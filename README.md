@@ -20,7 +20,7 @@ Step 2: Once setup is done, you will see like
 
 Step 3: Now you need to setup a sample repository where your test case are mentioned, [smartui-github-testing](https://github.com/LambdaTest/smartui-github-testing)
 
-Step 4: For Github Status updates on PR/ commit need to add capabilities in test suite, code snippet
+Step 4: For Github Status updates on PR/ commit need to add capabilities in test suite,
 
 ```
     github: {
@@ -31,11 +31,10 @@ Step 4: For Github Status updates on PR/ commit need to add capabilities in test
     },
 ```
 
-Step5: How to get the github.url  value in test suite
+Step5: How to get the `github.url`  value in test suite
 
-Here we have taken an example of github action to get the github.url
+Here we have taken an example of github action, Add below steps in your github action file [.github/workflows/ci.yml](https://github.com/LambdaTest/smartui-github-testing/blob/main/.github/workflows/ci.yml)
 
-Add below steps in your github action file .github/workflows/ci.yml
 ```
     name: Execute SmartUI Test with Github App Integration
     runs-on: ubuntu-latest
