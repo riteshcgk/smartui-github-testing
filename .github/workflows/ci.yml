@@ -11,8 +11,8 @@ env:
   GRID_URL: ${{ secrets.GRID_URL }}
 
 jobs:
-  Find-GitSHA:
-    name: find Git Sha
+  SmartUI-Gihub-Action:
+    name: Execute SmartUI Test with Github App Integration
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
