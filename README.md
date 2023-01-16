@@ -14,7 +14,6 @@ Steps 1: Setup Github App with lambdatest from link github setup
 
 - Self Hosted
 
-
 Step 2: Once setup is done, you will see like 
 
 Step 3: Now you need to setup a sample repository where your test case are mentioned, [smartui-github-testing](https://github.com/LambdaTest/smartui-github-testing)
