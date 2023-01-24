@@ -56,3 +56,4 @@ Here we have taken an example of github action, Add below steps in your github a
 Step 6: Commit you changes over git on a branch and raise the PR to main branch
 
 Step 7: Now you will see the `lambdatest-smartui-app` check in the PR
+
