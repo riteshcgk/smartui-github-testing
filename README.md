@@ -50,6 +50,7 @@ Here we have taken an example of github action, Add below steps in your github a
         GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
         echo "GITHUB_URL: $GITHUB_URL"
         echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
+        
 ```
 
 
