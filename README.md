@@ -1,7 +1,8 @@
- Smart UI Testing With GitHub ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+ <h1>Smart UI Testing With GitHub</h1>
 
-<img height="400" src="https://user-images.githubusercontent.com/126776938/232535830-a5d8ba0b-b4f5-4aba-a856-012b748a87ae.png">
+<img height="400" src="https://user-images.githubusercontent.com/126776938/232716259-60606fe2-d9ed-4449-9586-321a5950308e.png">
 
+  <p align="center">
   <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=playwright-sample" target="_bank">Blog</a>
   &nbsp; &#8901; &nbsp;
   <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=playwright-sample" target="_bank">Docs</a>
@@ -42,8 +43,9 @@
 You can integrate your LambdaTest account with the GiHub application in the following ways:
 
 - Using OAuth
-- Cloud, or
-- Self Hosted
+
+![github-app-landing-92ef6e152a7302cb9ab88f5034b9ec0c](https://user-images.githubusercontent.com/126776938/232715867-f375b4df-1bc9-4e88-8340-44e986be2e9a.png)
+
 
 ### Step 2: Select your GitHub repository 
 
@@ -96,6 +98,8 @@ Go to `.github/workflows/<your_ci_file>.yml`.
 ### Step5: Execute your test suite with CI
 
 After the setup is completed, you can now execute your test suite with the Continuos Integration (CI) pipeline with any tool of your choice.
+
+**Please Note:** *On running the tests with this repository the user should be able to trigger the `GitHub Action` and execute the `SmartUI` tests for `Selenium`, `Cypress, CDP, and Taiko` frameworks. As this action does not work for `StoryBook`, check our how you can SmartUI test with `StoryBook` [here](https://github.com/LambdaTest/smartui-storybook).* 
 
 ### Step 6: Commit you changes over git on a branch and raise the PR to main branch.
 
