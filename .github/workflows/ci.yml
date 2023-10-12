@@ -1,4 +1,4 @@
-name: Quality Checks
+name: Quality Checks CI
 on:
   pull_request:
     branches:
