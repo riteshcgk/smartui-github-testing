@@ -93,6 +93,7 @@ Go to `.github/workflows/<your_ci_file>.yml`.
         GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
         echo "GITHUB_URL: $GITHUB_URL"
         echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
+        
 ```
 
 ### Step5: Execute your test suite with CI
