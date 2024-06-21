@@ -4,18 +4,18 @@ var moment = require("moment");
 var waitTime = 2; // 2 seconds
 
 // username: Username can be found at automation dashboard
-const USERNAME = process.env.LT_USERNAME || "haiderk";
+const USERNAME = process.env.LT_USERNAME || "riteshk";
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
 const KEY =
   process.env.LT_ACCESS_KEY ||
-  "i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R";
+  "ytm7gKIgDBcYF2M0okOWnzuAwVU9nYP7qHKaoh7l9vufAv8BHi";
 
 // gridUrl: gridUrl can be found at automation dashboard
 const GRID_HOST = process.env.GRID_HOST || "@hub.lambdatest.com/wd/hub"; //connect to lambdatest hub
 
 const GRID_URL = process.env.GRID_URL || "GRID_URL";
-// const GRID_URL = "https://haiderk:V2mDZgIXHVEFxPfVu3cODSDpe9cZ4MT2Z1ZkDbp5uMJ8XL0nxh@stage-hub.lambdatestinternal.com/wd/hub"
+// const GRID_URL = "https://riteshk:ytm7gKIgDBcYF2M0okOWnzuAwVU9nYP7qHKaoh7l9vufAv8BHi@stage-hub.lambdatestinternal.com/wd/hub"
 // const GRID_URL = "https://haiderk:i7vF5r66IYgsgE9Hp5t6hZqd5PkQX021FgpWRC70mp0ShbFh1R@hub.lambdatest.com/wd/hub"
 
 async function searchTextOnGoogle() {
@@ -39,7 +39,7 @@ async function searchTextOnGoogle() {
     name: "test session", // name of the test
     build: platform + browserName + version, // name of the build
     // "smartUI.build": "Github-build",
-    "smartUI.project": "github-integration-testing-1",
+    "smartUI.project": "github-integration-testing-5",
     github: {
       url: process.env.GITHUB_URL,
     },
